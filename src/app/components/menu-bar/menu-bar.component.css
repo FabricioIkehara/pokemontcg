@@ -1,0 +1,66 @@
+.sidemenu,
+.content {
+  display: inline-block;
+  vertical-align: top;
+}
+.sidemenu {
+  border: 1px solid darkgray;
+  width: 50px;
+  height: auto;
+}
+.sidemenu a {
+  display: inline-block;
+}
+
+.sidemenu a:hover {
+  color: red;
+  transition: 0.2s;
+  scale: 1.2;
+}
+
+.content {
+  height: 400px;
+  width: 400px;
+  overflow-y: scroll;
+}
+
+.pokeball {
+  position: relative;
+  width: 60px;
+}
+
+.pokeball img {
+  width: 100%;
+  transition: transform 0.3s;
+}
+
+.pokeball:hover img {
+  transform: rotate(180deg);
+  scale: 1.2;
+}
+
+.sidemenu {
+  background-color: #f0f0f0;
+  width: 100px;
+  padding: 20px;
+}
+
+.sidemenu h1 {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.sidemenu a {
+  display: block;
+  padding: 10px 0;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+}
+
+.pokeball img {
+  width: 30px;
+  margin-bottom: 10px;
+}
+
+
