@@ -1,0 +1,10 @@
+<link rel="stylesheet"
+href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+crossorigin="anonymous">
+<div class="pokemon-card-show">
+  <img [src]="cardShow" alt="Imagem Large" />
+  <p>Nome da carta: {{ cardDetail.name }}</p>
+  <p>Tipo: {{ cardDetail.types.join(', ') }}</p>
+  <button (click)="voltar()" type="button" class="btn btn-primary btn-lg">Voltar</button>
+</div>

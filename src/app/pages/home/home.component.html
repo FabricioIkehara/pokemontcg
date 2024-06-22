@@ -1,8 +1,8 @@
-<div class="container">
-  <app-title-bar></app-title-bar>
-  <app-menu-bar></app-menu-bar>
-  <div id="pokemon-container">
-    <div *ngFor="let card of cards" class="pokemon-card">
-      <img class="pokemon-image" [src]="card.images.small" [alt]="card.name" />
-    </div>
-  </div>
+
+
+
+<app-title-bar></app-title-bar>
+<app-menu-bar></app-menu-bar>
+<router-outlet />
+
+

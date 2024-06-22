@@ -1,0 +1,10 @@
+.pokemon-card-show{
+  position: absolute;
+  top: 200px;
+  left: 25%;
+}
+
+p{
+  font-size: 25px;
+}
+

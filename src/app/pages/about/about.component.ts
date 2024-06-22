@@ -3,12 +3,12 @@ import { TitleBarComponent } from '../../components/title-bar/title-bar.componen
 import { MenuBarComponent } from '../../components/menu-bar/menu-bar.component';
 
 @Component({
-  selector: 'app-listcards',
+  selector: 'app-about',
   standalone: true,
   imports: [TitleBarComponent, MenuBarComponent],
-  templateUrl: './listcards.component.html',
-  styleUrl: './listcards.component.css'
+  templateUrl: './about.component.html',
+  styleUrl: './about.component.css'
 })
-export class ListcardsComponent {
+export class AboutComponent {
 
 }
