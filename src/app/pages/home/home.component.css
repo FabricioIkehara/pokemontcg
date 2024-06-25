@@ -1,15 +1,17 @@
-
-
-#carouselExampleControls {
-  display: flex;
+.content-home{
+  position:absolute;
+  top: 100px;
   justify-content: center;
+
+  margin-left: 15%;
   align-items: center;
-  max-width: 600px; /* Defina o tamanho máximo do carrossel */
-  margin: 0 auto; /* Centralize horizontalmente */
+  text-align: center;
 }
 
-/* Estilo para as imagens do carrossel */
-.carousel-item img {
-  width: 100%; /* Ajuste a largura da imagem para preencher o contêiner */
-  height: auto; /* Mantenha a proporção da imagem */
+
+.home-image{
+  position: relative;
+
+
+
 }

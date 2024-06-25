@@ -1,21 +1,20 @@
 import { Component } from '@angular/core';
 import { TitleBarComponent } from '../../components/title-bar/title-bar.component';
 import { MenuBarComponent } from '../../components/menu-bar/menu-bar.component';
-import { RouterOutlet } from '@angular/router';
-import { CardListComponent } from '../../components/card-list/card-list.component';
+
+
+
 
 
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TitleBarComponent, MenuBarComponent, RouterOutlet, CardListComponent],
+  imports: [TitleBarComponent, MenuBarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent {
-
-
+export class HomeComponent  {
 
 
 }
