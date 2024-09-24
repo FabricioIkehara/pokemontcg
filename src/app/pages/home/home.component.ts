@@ -19,15 +19,14 @@ export class HomeComponent  {
 
   images = [
     { imageSrc: "assets/C1.png",
-      imageAlt: 'poke1'
+      imageAlt: "poke1",
     },
-    { imageSrc: 'assets/C2.png',
-      imageAlt: 'poke2',
+    { imageSrc: "assets/C2.png",
+      imageAlt: "poke2",
     },
-    { imageSrc: 'assets/C3.png',
-      imageAlt: 'poke3',
+    { imageSrc: "assets/C3.png",
+      imageAlt: "poke3"
     }
-
-
   ]
+
 }

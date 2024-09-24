@@ -2,43 +2,52 @@ nav{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1em 15px;
+  padding: 1em 10px;
   border-bottom: 1px solid #777;
   height: 90px;
   top: 0;
   z-index: 10;
-  color: black;
 }
 
 .brand,
 .links{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   font-family: fantasy,Blippo;
   text-align: center;
   font-size: large;
+  margin-right: 10px;
 
 }
 
-.brand img{
+.links li + li::before {
+
+  display: inline-block;
+  margin-right: 20px;
+  margin-left: 20px;
+  vertical-align: middle;
+}
+
+.brand img {
   width: 180px;
   margin-right: 0.6em;
   height: 80px;
+  transition: transform 0.3s ease;
+  z-index: 1;
 }
 
-.brand h2{
-  transition: 0.4s;
+.brand img:hover {
+  transform: scale(1.2); /* Aumenta a imagem (zoom) */
 }
 
-.brand:hover > h2{
-  color: red;
-  scale: 1.1;
-}
+
 
 .links li{
-  margin-right: 1em;
+  position: relative;
+  margin-right: 30px;
   list-style: none;
+
 }
 
 .links a{

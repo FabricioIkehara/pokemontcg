@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CommonModule } from '@angular/common';
 
+
 @Component({
   selector: 'app-root',
   standalone: true,

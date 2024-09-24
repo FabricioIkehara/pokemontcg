@@ -1,9 +1,7 @@
 import { CommonModule } from '@angular/common';
-import { Component, input, Input, OnInit } from '@angular/core';
-import { Carousel } from 'bootstrap';
-import { BsDropdownModule } from 'ng-bootstrap/dropdown';
-import { TooltipModule } from 'ng-bootstrap/tooltip';
-import { Interface } from 'readline';
+import { Component, Input, OnInit } from '@angular/core';
+
+
 
 interface carouselImage{
   imageSrc: string;
@@ -20,14 +18,33 @@ interface carouselImage{
 export class CarouselComponent implements OnInit {
 
   @Input() images: carouselImage[] = [];
-
   @Input() indicators = true;
+  @Input() controls = true;
 
   selectedIndex = 0;
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
   }
 
+  //Função para usar seleção por DOT//
+selectImage(index: number): void{
+  this.selectedIndex = index;
+ }
 
+ onPrevClick(): void {
+  if(this.selectedIndex === 0) {
+    this.selectedIndex = this.images.length - 1;
+ } else {
+  this.selectedIndex --;
+}
+
+}
+
+ onNextClick(): void {
+  if(this.selectedIndex === this.images.length - 1) {
+    this.selectedIndex = 0;
+ } else {
+  this.selectedIndex ++;
+}
+ }
 }
