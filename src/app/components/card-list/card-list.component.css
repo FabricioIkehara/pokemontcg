@@ -1,22 +1,20 @@
+.card-list-container{
+   flex-direction: column;
+   top: 90px;
+}
 
 .pokemon-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  padding: 5px;
 }
 
 .card-position{
-  position: absolute;
-  margin-left: 120px;
-  top: 120px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 5px;
-}
-
-.btn-position{
-padding: 20px;
-justify-content: space-between;
+    margin-left: 40px;
+    padding-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 
 }
 
@@ -24,14 +22,14 @@ justify-content: space-between;
   padding-top: 20px;
   align-items: center;
   margin-left: 75%;
-  top: 250px;
+  top: 300px;
 
 }
 
 .btn-position {
   position: absolute;
-  top: 50px;
-  left: 200px;
+  top: 100px;
+  left: 37%;
   display: flex;
   gap: 10px;
 }
