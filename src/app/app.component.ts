@@ -6,16 +6,19 @@ import { HomeComponent } from './pages/home/home.component';
 import { CardListComponent } from './components/card-list/card-list.component';
 import { DetailComponent } from './components/detail/detail.component';
 import { FormsModule } from '@angular/forms';
+import { CarouselComponent } from './components/carousel/carousel.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet, TitleBarComponent,
     MenuBarComponent, HomeComponent,
-    CardListComponent, DetailComponent, FormsModule],
+    CardListComponent, DetailComponent, FormsModule, CarouselComponent, CommonModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'meu-projeto-pokemon-tcg';
+
 }
