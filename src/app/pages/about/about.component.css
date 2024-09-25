@@ -2,19 +2,27 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  margin-top: 30px
+  margin-top: 30px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .about-content{
-  display: flex; /* Usa flex para alinhar a imagem e o texto em linha */
-  align-items: center; /* Alinha verticalmente a imagem e o texto */
-  justify-content: space-between; /* Centraliza o conteúdo horizontalmente */
-  margin-left: 5%; /* Adiciona uma margem à esquerda para o conteúdo */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-left: 5%;
   margin-right: 30%;
+  margin-bottom: 20px;
 }
 
 .about-content img{
   height: 350px;
   width: 250px;
   margin-right: 20px;
+}
+
+.about-text{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: medium;
 }

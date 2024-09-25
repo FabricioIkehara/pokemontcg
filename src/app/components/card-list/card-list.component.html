@@ -9,27 +9,25 @@
     <button (click)="avancarPagina()" type="button" class="btn btn-outline-warning" style="margin-left: 20px;">Próxima página</button>
      </ng-container>
   </div>
-<div class="card-position">
-  <div class="row">
-    <ng-container *ngIf="searchResultsAvailable">
-      <div class="col-md-2" *ngFor="let card of cardListFind; let i = index"
-           [ngClass]="{'d-none': i >= 10}">
-        <a [routerLink]="['/detail', card.id]">
-          <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
-        </a>
-      </div>
-    </ng-container>
+  <div class="card-position">
+    <div class="d-flex flex-wrap justify-content-start">
+      <ng-container *ngIf="searchResultsAvailable">
+        <div class="card-item" *ngFor="let card of cardListFind; let i = index" [ngClass]="{'d-none': i >= 10}">
+          <a [routerLink]="['/detail', card.id]">
+            <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
+          </a>
+        </div>
+      </ng-container>
 
-    <ng-container *ngIf="!searchResultsAvailable">
-      <div class="col-md-2" *ngFor="let card of cardList; let i = index"
-           [ngClass]="{'d-none': i >= 10}">
-        <a [routerLink]="['/detail', card.id]">
-          <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
-        </a>
-      </div>
-    </ng-container>
+      <ng-container *ngIf="!searchResultsAvailable">
+        <div class="card-item" *ngFor="let card of cardList; let i = index" [ngClass]="{'d-none': i >= 10}">
+          <a [routerLink]="['/detail', card.id]">
+            <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
+          </a>
+        </div>
+      </ng-container>
+    </div>
   </div>
-</div>
 
   <!-- <div class="search-cards">
     <h3>Buscar</h3>
@@ -49,5 +47,5 @@
   </div> -->
 
 </div>
-
+<app-footer></app-footer>
 

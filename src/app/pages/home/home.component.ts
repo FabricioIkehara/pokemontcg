@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { TitleBarComponent } from '../../components/title-bar/title-bar.component';
 import { MenuBarComponent } from '../../components/menu-bar/menu-bar.component';
 import { CarouselComponent } from '../../components/carousel/carousel.component';
+import { FooterComponent } from '../../components/footer/footer.component';
 
 
 
@@ -11,7 +12,7 @@ import { CarouselComponent } from '../../components/carousel/carousel.component'
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [TitleBarComponent, MenuBarComponent, CarouselComponent],
+  imports: [TitleBarComponent, MenuBarComponent, CarouselComponent, FooterComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

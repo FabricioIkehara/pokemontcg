@@ -8,6 +8,7 @@ import { DetailComponent } from './components/detail/detail.component';
 import { FormsModule } from '@angular/forms';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './components/footer/footer.component';
 
 
 @Component({
@@ -15,7 +16,7 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterOutlet, TitleBarComponent,
     MenuBarComponent, HomeComponent,
-    CardListComponent, DetailComponent, FormsModule, CarouselComponent, CommonModule],
+    CardListComponent, DetailComponent, FormsModule, CarouselComponent, CommonModule, FooterComponent ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

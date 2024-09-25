@@ -1,4 +1,22 @@
-.content-home{
-  position:absolute;
-  top: 100px;
+.home-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+
+ margin-top: 15px;
+ padding: 20px;
+ margin-left: 50px;
+ margin-right: 50px;
+ padding-top: 20px;
+ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.home-container h4{
+  margin-left: 50px;
+  margin-right: 50px;
+  padding-top: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
 }

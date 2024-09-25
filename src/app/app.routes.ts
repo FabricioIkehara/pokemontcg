@@ -11,4 +11,5 @@ export const routes: Routes = [
   { path: 'detail/:id', component: DetailComponent },
   { path: 'about', component: AboutComponent }
 
+
 ];

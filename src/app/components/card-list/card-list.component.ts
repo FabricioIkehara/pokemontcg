@@ -6,13 +6,16 @@ import { FormsModule } from '@angular/forms';
 import { Router, RouterModule } from '@angular/router';
 import { TitleBarComponent } from '../title-bar/title-bar.component';
 import { MenuBarComponent } from '../menu-bar/menu-bar.component';
+import { FooterComponent } from '../footer/footer.component';
 
 
 
 @Component({
   selector: 'app-card-list',
   standalone: true,
-  imports: [ HttpClientModule, CommonModule, FormsModule, RouterModule, TitleBarComponent, MenuBarComponent],
+  imports: [ HttpClientModule, CommonModule, FormsModule,
+    RouterModule, TitleBarComponent, MenuBarComponent,
+  FooterComponent],
   templateUrl: './card-list.component.html',
   styleUrl: './card-list.component.css'
 })

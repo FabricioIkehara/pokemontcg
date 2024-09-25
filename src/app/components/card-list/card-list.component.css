@@ -10,7 +10,7 @@
 }
 
 .card-position{
-    margin-left: 40px;
+    margin-left: 10px;
     padding-top: 50px;
     display: flex;
     flex-wrap: wrap;
@@ -32,4 +32,9 @@
   left: 37%;
   display: flex;
   gap: 10px;
+}
+
+.card-item {
+  flex: 0 0 calc(20% - 10px);
+  margin: 5px;
 }
