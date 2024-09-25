@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:meu-projeto-pokemon-tcg": "node dist/meu-projeto-pokemon-tcg/server/server.mjs"
+    "serve:ssr:meu-projeto-pokemon-tcg": "node dist/meu-projeto-pokemon-tcg/server/server.mjs",
+    "deploy:ghdocs": "ng build --configuration production --output-path docs --base-href /pokemontcg/"
   },
   "private": true,
   "dependencies": {
