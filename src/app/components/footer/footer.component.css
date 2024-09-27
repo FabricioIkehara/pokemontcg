@@ -4,10 +4,11 @@ footer {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 130px;
+  height: auto; /* Permite que a altura se ajuste conforme o conteúdo */
+  padding: 20px; /* Adiciona um padding para evitar que o conteúdo fique muito colado nas bordas */
 }
 
-.footer-title{
+.footer-title {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,29 +16,66 @@ footer {
   margin-top: 10px;
 }
 
-.footer-title img{
-
-  height: 30px
+.footer-title img {
+  height: 30px;
 }
 
-.footer-icons{
+.footer-icons {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   margin-top: 5px;
+  flex-wrap: wrap; /* Permite que os ícones quebrem a linha em telas pequenas */
 }
-.footer-icons img{
+
+.footer-icons img {
   height: 45px;
   width: 45px;
-
+  margin: 0 5px; /* Adiciona um espaçamento entre os ícones */
 }
+
 footer h3 {
   margin-bottom: 1.3em;
 }
 
-footer span{
+footer span {
   margin-top: 10px;
   font-weight: bold;
   color: #df5e08;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  footer {
+    padding: 15px; /* Ajusta o padding para telas menores */
+  }
+
+  .footer-icons img {
+    height: 40px; /* Reduz a altura dos ícones em telas menores */
+    width: 40px; /* Reduz a largura dos ícones em telas menores */
+  }
+
+  footer h3 {
+    font-size: 1.2rem; /* Ajusta o tamanho da fonte do título para telas menores */
+  }
+}
+
+/* Responsividade para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  footer {
+    padding: 10px; /* Menos padding em telas muito pequenas */
+  }
+
+  .footer-title img {
+    height: 25px; /* Reduz a altura da imagem do título */
+  }
+
+  footer h3 {
+    font-size: 1rem; /* Tamanho de fonte ainda menor para celulares pequenos */
+  }
+
+  footer span {
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte do span */
+  }
 }

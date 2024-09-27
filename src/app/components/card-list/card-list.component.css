@@ -1,8 +1,3 @@
-.card-list-container{
-   flex-direction: column;
-   top: 90px;
-}
-
 .pokemon-image {
   width: 100%;  /* Imagem sempre ocupa 100% da largura do card */
   height: auto; /* Mantém a proporção da imagem */
@@ -26,14 +21,14 @@
 
 .btn-position {
   position: absolute;
-  top: 100px;
+  top: 200px; /* Ajuste a distância do topo para dar mais espaço */
   left: 37%;
   display: flex;
   gap: 10px;
 }
 
 .card-item {
-  flex: 0 0 calc(20% - 10px); /* Cada card ocupa 20% do espaço na linha */
+  flex: 0 0 calc(20% - 10px);
   margin: 5px;
 }
 
@@ -49,7 +44,7 @@
 
   .btn-position {
     left: 10%; /* Reposiciona o botão mais para a esquerda em telas pequenas */
-    top: 120px; /* Ajusta a posição vertical */
+    top: 250px; /* Aumenta a distância dos botões para o topo */
     flex-direction: column; /* Empilha os botões verticalmente em telas menores */
   }
 
@@ -70,6 +65,7 @@
   .btn-position {
     left: 0;  /* Centraliza os botões em telas muito pequenas */
     width: 100%; /* Botões ocupam toda a largura da tela */
+    top: 300px; /* Mais espaçamento do topo para celulares pequenos */
   }
 
   .search-cards {

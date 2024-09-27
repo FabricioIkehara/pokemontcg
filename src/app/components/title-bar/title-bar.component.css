@@ -1,4 +1,4 @@
-nav{
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -10,19 +10,17 @@ nav{
 }
 
 .brand,
-.links{
+.links {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-family: fantasy,Blippo;
+  font-family: fantasy, Blippo;
   text-align: center;
   font-size: large;
   margin-right: 10px;
-
 }
 
 .links li + li::before {
-
   display: inline-block;
   margin-right: 20px;
   margin-left: 20px;
@@ -41,16 +39,13 @@ nav{
   transform: scale(1.2); /* Aumenta a imagem (zoom) */
 }
 
-
-
-.links li{
+.links li {
   position: relative;
   margin-right: 30px;
   list-style: none;
-
 }
 
-.links a{
+.links a {
   padding: 0.1em 0.3em;
   text-decoration: none;
 }
@@ -59,18 +54,65 @@ nav{
   color: red;
   scale: 1.2;
   transition: 0.4s;
-
 }
 
-#add a{
-  color: #dec129
+#add a {
+  color: #dec129;
 }
 
-#add a:hover{
+#add a:hover {
   background-color: #efefef;
 }
 
-.logo{
+.logo {
   width: 180px;
   height: 90px;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column; /* Empilha os elementos verticalmente em telas pequenas */
+    height: auto; /* Ajusta a altura automaticamente */
+    padding: 1em;
+  }
+
+  .brand {
+    justify-content: center; /* Centraliza a marca em telas pequenas */
+    margin-bottom: 10px; /* Dá espaçamento para os links abaixo */
+  }
+
+  .links {
+    flex-direction: column; /* Alinha os links verticalmente em dispositivos móveis */
+    align-items: center; /* Centraliza os links */
+  }
+
+  .links li {
+    margin-bottom: 10px; /* Espaçamento entre os itens do menu */
+    margin-right: 0; /* Remove margem direita para centralizar os links */
+  }
+
+  .links li + li::before {
+    content: none; /* Remove o separador em telas pequenas */
+  }
+
+  .links a {
+    font-size: 1.2rem; /* Aumenta o tamanho da fonte para melhorar a legibilidade em telas menores */
+  }
+}
+
+/* Responsividade para telas muito pequenas, como celulares (480px) */
+@media (max-width: 480px) {
+  .brand img {
+    width: 120px; /* Reduz o tamanho da logo em telas muito pequenas */
+    height: auto;
+  }
+
+  .links a {
+    font-size: 1rem; /* Ajusta o tamanho da fonte em dispositivos menores */
+  }
+
+  nav {
+    padding: 1em 0; /* Reduz o padding para ocupar menos espaço vertical */
+  }
 }
