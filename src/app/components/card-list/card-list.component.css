@@ -4,26 +4,24 @@
 }
 
 .pokemon-image {
-  width: 100%;
-  height: auto;
+  width: 100%;  /* Imagem sempre ocupa 100% da largura do card */
+  height: auto; /* Mantém a proporção da imagem */
   padding: 5px;
 }
 
-.card-position{
-    margin-left: 10px;
-    padding-top: 50px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-
+.card-position {
+  margin-left: 10px;
+  padding-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
-.search-cards{
+.search-cards {
   padding-top: 20px;
   align-items: center;
   margin-left: 75%;
   top: 300px;
-
 }
 
 .btn-position {
@@ -35,6 +33,46 @@
 }
 
 .card-item {
-  flex: 0 0 calc(20% - 10px);
+  flex: 0 0 calc(20% - 10px); /* Cada card ocupa 20% do espaço na linha */
   margin: 5px;
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  .card-position {
+    justify-content: center; /* Centraliza os cards em telas menores */
+  }
+
+  .card-item {
+    flex: 0 0 calc(50% - 10px); /* Cada card ocupa 50% da largura em telas pequenas */
+  }
+
+  .btn-position {
+    left: 10%; /* Reposiciona o botão mais para a esquerda em telas pequenas */
+    top: 120px; /* Ajusta a posição vertical */
+    flex-direction: column; /* Empilha os botões verticalmente em telas menores */
+  }
+
+  .search-cards {
+    margin-left: 0;
+    width: 100%;  /* Barra de busca ocupa toda a largura em mobile */
+    padding: 10px;
+    text-align: center; /* Centraliza a barra de busca */
+  }
+}
+
+/* Responsividade para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .card-item {
+    flex: 0 0 calc(100% - 10px); /* Cada card ocupa 100% da largura em celulares */
+  }
+
+  .btn-position {
+    left: 0;  /* Centraliza os botões em telas muito pequenas */
+    width: 100%; /* Botões ocupam toda a largura da tela */
+  }
+
+  .search-cards {
+    margin-top: 20px;
+  }
 }

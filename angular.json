@@ -100,7 +100,7 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "baseHref": "https://fabricioikehara.github.io/pokemontcg/"
+            "baseHref": "/pokemontcg/"
           }
         }
       }

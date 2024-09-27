@@ -1,13 +1,12 @@
-.about-container{
+.about-container {
   display: flex;
   flex-direction: column;
   text-align: center;
   margin-top: 30px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
 }
 
-.about-content{
+.about-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -16,13 +15,35 @@
   margin-bottom: 20px;
 }
 
-.about-content img{
+.about-content img {
   height: 350px;
   width: 250px;
   margin-right: 20px;
 }
 
-.about-text{
+.about-text {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: medium;
+}
+
+/* Estilos para telas menores (ex: mobile) */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column; /* Transforma em uma coluna para telas pequenas */
+    margin-left: 0;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .about-content img {
+    width: 100%; /* Imagem se adapta à largura da tela */
+    height: auto; /* Mantém a proporção */
+    margin-right: 0;
+    margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+  }
+
+  .about-text {
+    font-size: 1rem; /* Ajusta o tamanho da fonte para melhor legibilidade no mobile */
+    padding: 0 20px; /* Adiciona espaçamento interno */
+  }
 }
