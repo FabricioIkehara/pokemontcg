@@ -133,3 +133,60 @@
     height: 40px; /* Reduz ainda mais a altura dos ícones */
   }
 }
+
+
+.btn-carousel {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  padding: 0;
+  color: rgb(255, 255, 255); /* Branco para melhor contraste */
+  background: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+  border: 0;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 5px; /* Bordas arredondadas */
+}
+
+.icon-carousel {
+  width: 70px; /* Largura do ícone */
+  height: 70px; /* Altura do ícone */
+  opacity: 1; /* Totalmente visíveis */
+  transition: opacity 0.15s ease;
+}
+
+.icon-carousel:hover {
+  opacity: 1; /* Totalmente opaco ao passar o mouse */
+}
+
+.icon-carousel:active {
+  opacity: 0.7; /* Diminui ao clicar */
+}
+
+/* Responsividade para telas menores que 768px */
+@media (max-width: 768px) {
+  .carousel-container {
+    padding: 10px; /* Ajusta o padding para telas menores */
+  }
+
+  .icon-carousel {
+    width: 60px; /* Ajuste a largura dos ícones */
+    height: 60px; /* Ajuste a altura dos ícones */
+  }
+}
+
+/* Responsividade para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .carousel-container {
+    padding: 5px; /* Menos padding em telas muito pequenas */
+  }
+
+  .icon-carousel {
+    width: 50px; /* Ajuste a largura dos ícones */
+    height: 50px; /* Ajuste a altura dos ícones */
+  }
+}

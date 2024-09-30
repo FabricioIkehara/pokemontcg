@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @Component({
@@ -16,7 +17,7 @@ import { FooterComponent } from './components/footer/footer.component';
   standalone: true,
   imports: [RouterOutlet, TitleBarComponent,
     MenuBarComponent, HomeComponent,
-    CardListComponent, DetailComponent, FormsModule, CarouselComponent, CommonModule, FooterComponent ],
+    CardListComponent, DetailComponent, FormsModule, CarouselComponent, CommonModule, FooterComponent, FontAwesomeModule ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })

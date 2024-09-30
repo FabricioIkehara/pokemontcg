@@ -12,14 +12,12 @@
             >
           </span>
     </div>
-    <button *ngIf="controls" class="btn-carousel btn-prev">
-      <i class="fa fa-arrow-circle-left icon-carousel icon-prev"
-      (click)="onNextClick()"
-      ></i>
-   </button>
-    <button *ngIf="controls" class="btn-carousel btn-next">
-      <i class="fa fa-arrow-circle-right icon-carousel icon-next"
-      (click)="onNextClick()"
-      ></i>
-   </button>
+    <button *ngIf="controls" class="btn-carousel btn-prev" (click)="onPrevClick()">
+      <fa-icon [icon]="['fas', 'fa-arrow-left']" class="icon-carousel icon-prev"></fa-icon>
+    </button>
+
+    <button *ngIf="controls" class="btn-carousel btn-next" (click)="onNextClick()">
+      <fa-icon [icon]="['fas', 'fa-arrow-right']" class="icon-carousel icon-next"></fa-icon>
+    </button>
+
 </div>

@@ -1,11 +1,25 @@
-.pokemon-card-show{
+/* Estilo padrão para a carta */
+.pokemon-card-show {
   position: absolute;
   top: 200px;
-  left: 25%;
+  left: 50%;
+  transform: translateX(-50%);
   border: 5px;
 }
 
-p{
-  font-size: 25px;
+/* Responsividade - centralizando a carta */
+@media (max-width: 768px) {
+  .pokemon-card-show {
+    position: relative;
+    margin: 0 auto;
+    top: 0;
+    left: 0;
+    transform: none;
+    display: block;
+    width: 90%; /* ou ajuste de acordo com a largura que deseja */
+  }
 }
 
+p {
+  font-size: 25px;
+}

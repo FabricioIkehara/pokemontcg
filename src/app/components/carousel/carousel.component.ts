@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -11,7 +12,7 @@ interface carouselImage{
 @Component({
   selector: 'app-carousel',
   standalone: true,
-  imports: [ CommonModule],
+  imports: [ CommonModule,FontAwesomeModule],
   templateUrl: './carousel.component.html',
   styleUrl: './carousel.component.css'
 })
