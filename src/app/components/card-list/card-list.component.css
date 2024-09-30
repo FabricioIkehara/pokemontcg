@@ -4,55 +4,94 @@
   padding: 5px;
 }
 
+.btn-position {
+  position: relative; /* Para garantir que o layout seja fluido */
+  display: flex; /* Ativa o Flexbox */
+  justify-content: center; /* Centraliza os botões horizontalmente */
+  width: 100%; /* Garante que ocupe toda a largura */
+  top: 30px; /* Ajuste conforme a necessidade */
+  flex-direction: row; /* Organiza os botões em uma linha */
+  gap: 10px; /* Espaçamento entre os botões */
+}
+
 .card-position {
   margin-left: 10px;
   padding-top: 50px;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-}
-
-/* Adiciona margem superior para evitar sobreposição nas telas menores */
-@media (max-width: 768px) {
-  .card-position {
-    justify-content: center;
-    margin-top: 50px; /* Espaço antes das cartas em telas pequenas */
-  }
-}
-
-.search-cards {
-  padding-top: 20px;
-  align-items: center;
-  margin-left: 75%;
-  top: 300px;
-}
-
-.btn-position {
-  position: absolute;
-  top: 100px; /* Ajuste a distância do topo para deixar os botões mais altos */
-  left: 37%;
-  display: flex;
-  gap: 10px;
+  flex-wrap: wrap; /* Permite que os itens se movam para a próxima linha */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  width: 100%; /* Garante que ocupa toda a largura disponível */
+  box-sizing: border-box; /* Inclui padding e margin no cálculo da largura */
 }
 
 .card-item {
-  flex: 0 0 calc(20% - 10px);
+  flex: 0 0 calc(20% - 10px); /* 5 itens por linha em telas grandes */
   margin: 5px;
 }
 
-@media (max-width: 768px) {
-  .card-position {
-    justify-content: center;
-    margin-top: 50px; /* Adiciona margem para evitar sobreposição */
-  }
+.custom-button-prev {
+  background-color: transparent; /* Cor de fundo */
+  color: #4CAF50; /* Cor do texto */
+  border:2px solid #4CAF50; /* Remove borda */
+  border-radius: 5px; /* Arredonda os cantos */
+  padding: 10px 20px; /* Espaçamento interno */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
 
+.custom-button-prev:hover {
+  background-color: #36a73c;
+  color: aliceblue;
+}
+
+.custom-button-prev:active {
+  background-color: #21bb26; /* Cor de fundo ao clicar */
+  transform: scale(0.98); /* Reduz ligeiramente o botão ao clicar */
+}
+
+.custom-button-prev[disabled] {
+  background-color: #cccccc; /* Cor de fundo quando desabilitado */
+  cursor: not-allowed; /* Cursor de não permitido quando desabilitado */
+  color: #666666; /* Cor do texto quando desabilitado */
+}
+
+.custom-button-next {
+  background-color: transparent; /* Cor de fundo */
+  color: #285fc5; /* Cor do texto */
+  border: 2px solid #285fc5; /* Remove borda */
+  border-radius: 5px; /* Arredonda os cantos */
+  padding: 10px 20px; /* Espaçamento interno */
+  cursor: pointer; /* Muda o cursor ao passar sobre o botão */
+  font-size: 16px; /* Tamanho da fonte */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Transição suave */
+}
+
+.custom-button-next:hover {
+  background-color: #285fc5;
+  color: aliceblue; /* Cor de fundo ao passar o mouse */
+}
+
+.custom-button-next:active {
+  background-color: #285fc5; /* Cor de fundo ao clicar */
+  transform: scale(0.98); /* Reduz ligeiramente o botão ao clicar */
+}
+
+.custom-button-next[disabled] {
+  background-color: #cccccc; /* Cor de fundo quando desabilitado */
+  cursor: not-allowed; /* Cursor de não permitido quando desabilitado */
+  color: #666666; /* Cor do texto quando desabilitado */
+}
+
+/* Responsivo: Tela menor que 768px */
+@media (max-width: 768px) {
   .card-item {
-    flex: 0 0 calc(50% - 10px);
+    flex: 0 0 calc(100% - 10px); /* Uma coluna em telas menores */
   }
 
   .btn-position {
-    left: 30%;
-    top: 360px;
+    left: 5%;
+    top: 30px;
     flex-direction: row;
   }
 
@@ -64,15 +103,16 @@
   }
 }
 
+/* Responsivo: Tela menor que 480px */
 @media (max-width: 480px) {
   .card-item {
-    flex: 0 0 calc(100% - 10px);
+    flex: 0 0 calc(100% - 10px); /* Uma coluna em telas muito pequenas */
   }
 
   .btn-position {
     left: 0;
     width: 100%;
-    top: 340px;
+    top: 50px;
     flex-direction: column;
   }
 

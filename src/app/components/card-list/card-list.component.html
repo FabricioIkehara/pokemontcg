@@ -1,33 +1,34 @@
 <div class="card-list-container">
   <div class="btn-position">
-     <ng-container *ngIf="!searchResultsAvailable">
-    <button (click)="prevPagina()" type="button" class="btn btn-outline-success" [disabled]="page === 1">Página anterior</button>
-    <button (click)="proxPagina()" type="button" class="btn btn-outline-primary" style="margin-left: 20px;">Próxima página</button>
-     </ng-container>
-      <ng-container *ngIf="searchResultsAvailable">
-    <button (click)="retrocedePagina()" type="button" class="btn btn-outline-info">Página Anterior</button>
-    <button (click)="avancarPagina()" type="button" class="btn btn-outline-warning" style="margin-left: 20px;">Próxima página</button>
-     </ng-container>
-  </div>
-  <div class="card-position">
-    <div class="d-flex flex-wrap justify-content-start">
-      <ng-container *ngIf="searchResultsAvailable">
-        <div class="card-item" *ngFor="let card of cardListFind; let i = index" [ngClass]="{'d-none': i >= 10}">
-          <a [routerLink]="['/detail', card.id]">
-            <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
-          </a>
-        </div>
-      </ng-container>
+    <ng-container *ngIf="!searchResultsAvailable">
+      <button (click)="prevPagina()" type="button" class="custom-button-prev" [disabled]="page === 1">Página anterior</button>
+      <button (click)="proxPagina()" type="button" class="custom-button-next" style="margin-left: 20px;">Próxima página</button>
+    </ng-container>
 
-      <ng-container *ngIf="!searchResultsAvailable">
-        <div class="card-item" *ngFor="let card of cardList; let i = index" [ngClass]="{'d-none': i >= 10}">
-          <a [routerLink]="['/detail', card.id]">
-            <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
-          </a>
-        </div>
-      </ng-container>
-    </div>
+    <ng-container *ngIf="searchResultsAvailable">
+      <button (click)="retrocedePagina()" type="button" class="custom-button-prev">Página Anterior</button>
+      <button (click)="avancarPagina()" type="button" class="custom-button-next" style="margin-left: 20px;">Próxima página</button>
+    </ng-container>
   </div>
+
+  <div class="card-position">
+    <ng-container *ngIf="searchResultsAvailable">
+      <div class="card-item" *ngFor="let card of cardListFind; let i = index" [ngClass]="{'d-none': i >= 10}">
+        <a [routerLink]="['/detail', card.id]">
+          <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
+        </a>
+       </div>
+    </ng-container>
+
+    <ng-container *ngIf="!searchResultsAvailable">
+      <div class="card-item" *ngFor="let card of cardList; let i = index" [ngClass]="{'d-none': i >= 10}">
+        <a [routerLink]="['/detail', card.id]">
+          <img class="pokemon-image" [src]="card['images']['small']" [alt]="card['name']" />
+        </a>
+      </div>
+    </ng-container>
+  </div>
+</div>
 
   <!-- <div class="search-cards">
     <h3>Buscar</h3>
@@ -46,6 +47,6 @@
     </div>
   </div> -->
 
-</div>
+
 <app-footer></app-footer>
 
