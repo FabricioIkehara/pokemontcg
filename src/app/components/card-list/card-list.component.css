@@ -1,6 +1,6 @@
 .pokemon-image {
-  width: 100%;  /* Imagem sempre ocupa 100% da largura do card */
-  height: auto; /* Mantém a proporção da imagem */
+  width: 100%;
+  height: auto;
   padding: 5px;
 }
 
@@ -12,6 +12,14 @@
   justify-content: flex-start;
 }
 
+/* Adiciona margem superior para evitar sobreposição nas telas menores */
+@media (max-width: 768px) {
+  .card-position {
+    justify-content: center;
+    margin-top: 50px; /* Espaço antes das cartas em telas pequenas */
+  }
+}
+
 .search-cards {
   padding-top: 20px;
   align-items: center;
@@ -21,7 +29,7 @@
 
 .btn-position {
   position: absolute;
-  top: 200px; /* Ajuste a distância do topo para dar mais espaço */
+  top: 100px; /* Ajuste a distância do topo para deixar os botões mais altos */
   left: 37%;
   display: flex;
   gap: 10px;
@@ -32,40 +40,40 @@
   margin: 5px;
 }
 
-/* Responsividade para telas menores que 768px */
 @media (max-width: 768px) {
   .card-position {
-    justify-content: center; /* Centraliza os cards em telas menores */
+    justify-content: center;
+    margin-top: 50px; /* Adiciona margem para evitar sobreposição */
   }
 
   .card-item {
-    flex: 0 0 calc(50% - 10px); /* Cada card ocupa 50% da largura em telas pequenas */
+    flex: 0 0 calc(50% - 10px);
   }
 
   .btn-position {
-    left: 10%; /* Reposiciona o botão mais para a esquerda em telas pequenas */
-    top: 250px; /* Aumenta a distância dos botões para o topo */
-    flex-direction: column; /* Empilha os botões verticalmente em telas menores */
+    left: 30%;
+    top: 360px;
+    flex-direction: row;
   }
 
   .search-cards {
     margin-left: 0;
-    width: 100%;  /* Barra de busca ocupa toda a largura em mobile */
+    width: 100%;
     padding: 10px;
-    text-align: center; /* Centraliza a barra de busca */
+    text-align: center;
   }
 }
 
-/* Responsividade para telas menores que 480px (celulares pequenos) */
 @media (max-width: 480px) {
   .card-item {
-    flex: 0 0 calc(100% - 10px); /* Cada card ocupa 100% da largura em celulares */
+    flex: 0 0 calc(100% - 10px);
   }
 
   .btn-position {
-    left: 0;  /* Centraliza os botões em telas muito pequenas */
-    width: 100%; /* Botões ocupam toda a largura da tela */
-    top: 300px; /* Mais espaçamento do topo para celulares pequenos */
+    left: 0;
+    width: 100%;
+    top: 340px;
+    flex-direction: column;
   }
 
   .search-cards {
